@@ -31,7 +31,7 @@ We optimized the ResNet50 model (Learning Rate: 1e-5) to ensure a **smooth and s
 ### 📈 1. Performance Visualized
 The final model shows a perfect convergence without overfitting, making it safe for deployment.
 
-![Training Graph](screenshots/final_graph.png)
+![Training Graph](screenshots/training.png)
 
 ![Confusion Matrix](screenshots/confusion_matrix.png)
 *(Fig: The Confusion Matrix shows high precision, misclassifying only 1 Rust sample and 2 Scab samples)*
@@ -39,14 +39,14 @@ The final model shows a perfect convergence without overfitting, making it safe 
 ### 🧠 2. Explainability (Reasoning)
 Using **Grad-CAM**, we validated that the model is actually looking at the disease lesions.
 
-![Grad-CAM Logic](screenshots/gradcam.png)
+![Grad-CAM Logic](screenshots/grad-cam.png)
 *(Fig: Heatmap highlighting the Scab region on the leaf)*
 
 ### 🛡️ 3. Ethical Guardrails & Uncertainty
 Agriculture requires trust. We implemented **MC Dropout** to estimate uncertainty.
 * The system flags "High Risk" predictions even if the label is correct, ensuring humans verify doubtful cases.
 
-![Ethical Report](screenshots/ethical_report.png)
+![Ethical Report](screenshots/Ethical_Uncertainty.png)
 
 ---
 
